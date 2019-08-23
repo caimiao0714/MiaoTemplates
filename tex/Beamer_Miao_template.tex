@@ -107,6 +107,9 @@ $if(tables)$
 \makeatletter
 \def\fnum@table{\tablename~\thetable}
 \makeatother
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
 $endif$
 $if(graphics)$
 \usepackage{graphicx,grffile}
