@@ -3,7 +3,7 @@ title: An Example R Markdown Document
 subtitle: (A Subtitle Would Go Here if This Were a Class)
 author: Miao Cai
 institute: Department of Epidemiology and Biostatistics
-
+# date: "`r Sys.Date()`"
 titlegraphic: './logos/SLU-CPHSJ-left.png'
 fontsize: 10pt
 output:
@@ -72,6 +72,10 @@ Billy Ocean is advocating for what became the Goldwater-Nichols Act.
 
 - Wanted to take advantage of **economies of scale**, resolve **coordination problems** in U.S. military.
 
+
+Methods
+=======
+
 ### The Good Day Hypothesis
 
 We know the following about Ice Cube's day.
@@ -129,9 +133,6 @@ Sheena Easton and her baby are playing a **zero-sum (total conflict) game**.
 Conclusion
 ==========
 
-PHP is the best language
-------------------------
-
 ### Python
 
 Wonderful Python packages are available:
@@ -149,3 +150,7 @@ Wonderful R packages are available:
 - `tidyverse`
 - `data.table`
 - `caret`
+
+### The best language
+
+> PHP is the best language.

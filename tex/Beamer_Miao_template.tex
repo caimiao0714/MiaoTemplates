@@ -192,7 +192,7 @@ $endfor$
 
 \usepackage{graphicx}
 \usepackage{rotating}
-%\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption}[numbered]
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage[normalem]{ulem}
@@ -318,6 +318,44 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~$
   }%
 }
 
+
+%%%%%% Section, Subsection numbering
+\setbeamertemplate{section page}{%
+    \begingroup
+        \begin{beamercolorbox}[sep=10pt,center,rounded=true,shadow=true]{section title}
+        \usebeamerfont{section title}\thesection~\insertsection\par
+        \end{beamercolorbox}
+    \endgroup
+}
+
+\setbeamertemplate{subsection page}{%
+    \begingroup
+        \begin{beamercolorbox}[sep=2pt,center,rounded=true,shadow=true]{section title}
+        \usebeamerfont{section title}\thesection~\insertsection\par
+        \end{beamercolorbox}
+        \vspace*{-1.pt}
+        \begin{beamercolorbox}[sep=6pt,center,rounded=true,shadow=true]{subsection title}
+        \usebeamerfont{subsection title}\thesection.\thesubsection~\insertsubsection\par
+        \end{beamercolorbox}
+    \endgroup
+}
+
+\AtBeginSection[]{%
+    \begin{frame}
+        \sectionpage
+    \end{frame}
+}
+
+\AtBeginSubsection[]{%
+    \begin{frame}
+        \subsectionpage
+    \end{frame}
+}
+
+
+
+
+
 % I think I've moved to xelatex now. Here's some stuff for that.
 % --------------------------------------------------------------
 % I could customize/generalize this more but the truth is it works for my circumstances.
@@ -325,6 +363,7 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~$
 \ifxetex
 \setbeamerfont{title}{family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
 \setbeamerfont{frametitle}{family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
+\setbeamerfont{section title}{size=\Large,family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
 \usepackage[font=small,skip=0pt]{caption}
  \else
  \fi
@@ -374,7 +413,7 @@ $include-after$
 
 $endfor$
 
-\section{Table of Contents}
+\section*{Table of Contents}
 \frame{\small \frametitle{Table of Contents}
 \tableofcontents}
 \end{document}

@@ -67,7 +67,7 @@
 
 \usepackage{graphicx}
 \usepackage{rotating}
-%\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption}[numbered]
 \usepackage{hyperref}
 \usepackage{caption}
 \usepackage[normalem]{ulem}
@@ -193,6 +193,44 @@
   }%
 }
 
+
+%%%%%% Section, Subsection numbering
+\setbeamertemplate{section page}{%
+    \begingroup
+        \begin{beamercolorbox}[sep=10pt,center,rounded=true,shadow=true]{section title}
+        \usebeamerfont{section title}\thesection~\insertsection\par
+        \end{beamercolorbox}
+    \endgroup
+}
+
+\setbeamertemplate{subsection page}{%
+    \begingroup
+        \begin{beamercolorbox}[sep=2pt,center,rounded=true,shadow=true]{section title}
+        \usebeamerfont{section title}\thesection~\insertsection\par
+        \end{beamercolorbox}
+        \vspace*{-1.pt}
+        \begin{beamercolorbox}[sep=6pt,center,rounded=true,shadow=true]{subsection title}
+        \usebeamerfont{subsection title}\thesection.\thesubsection~\insertsubsection\par
+        \end{beamercolorbox}
+    \endgroup
+}
+
+\AtBeginSection[]{%
+    \begin{frame}
+        \sectionpage
+    \end{frame}
+}
+
+\AtBeginSubsection[]{%
+    \begin{frame}
+        \subsectionpage
+    \end{frame}
+}
+
+
+
+
+
 % I think I've moved to xelatex now. Here's some stuff for that.
 % --------------------------------------------------------------
 % I could customize/generalize this more but the truth is it works for my circumstances.
@@ -200,6 +238,7 @@
 \ifxetex
 \setbeamerfont{title}{family=\fontspec{Titillium Web}}
 \setbeamerfont{frametitle}{family=\fontspec{Titillium Web}}
+\setbeamerfont{section title}{size=\Large,family=\fontspec{Titillium Web}}
 \usepackage[font=small,skip=0pt]{caption}
  \else
  \fi
@@ -297,6 +336,9 @@ Billy Ocean is advocating for what became the Goldwater-Nichols Act.
 \end{itemize}
 
 \end{frame}
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
 
 \begin{frame}{The Good Day Hypothesis}
 \protect\hypertarget{the-good-day-hypothesis}{}
@@ -396,9 +438,6 @@ conflict) game}.
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
 
-\hypertarget{php-is-the-best-language}{%
-\subsection{PHP is the best language}\label{php-is-the-best-language}}
-
 \begin{frame}[fragile]{Python}
 \protect\hypertarget{python}{}
 
@@ -437,8 +476,17 @@ Wonderful R packages are available:
 
 \end{frame}
 
+\begin{frame}{The best language}
+\protect\hypertarget{the-best-language}{}
 
-\section{Table of Contents}
+\begin{quote}
+PHP is the best language.
+\end{quote}
+
+\end{frame}
+
+
+\section*{Table of Contents}
 \frame{\small \frametitle{Table of Contents}
 \tableofcontents}
 \end{document}
