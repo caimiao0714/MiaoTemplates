@@ -9,7 +9,7 @@ fontsize: 10pt
 output:
  beamer_presentation:
     template: tex/Beamer_Miao_template.tex
-    keep_tex: true
+    keep_tex: false
     latex_engine: xelatex # pdflatex also works here
     dev: cairo_pdf # I typically comment this out  if latex_engine: pdflatex
     slide_level: 3
@@ -30,33 +30,6 @@ knitr::opts_chunk$set(cache=FALSE,
 Introduction
 ============
 
-### Sheena Easton and Game Theory
-
-Sheena Easton describes the following scenario for her baby:
-
-1. Takes the morning train
-2. Works from nine 'til five
-3. Takes another train home again
-4. Finds Sheena Easton waiting for him
-
-### Rick Astley's Re-election Platform
-
-Rick Astley's campaign promises:
-
-- Never gonna give you up.
-- Never gonna let you down.
-- Never gonna run around and desert you.
-- Never gonna make you cry.
-- Never gonna say goodbye.
-- Never gonna tell a lie and hurt you.
-
-Are these promises (if credible) sufficient to secure re-election?
-
-
-### Rick Astley and Median Voter Theorem
-
-Whereas these pledges conform to the preferences of the **median voter**, we expect Congressman Astley to secure re-election.
-
 ### Caribbean Queen and Operation Urgent Fury
 
 Billy Ocean released "Caribbean Queen" in 1984.
@@ -71,10 +44,6 @@ Billy Ocean released "Caribbean Queen" in 1984.
 Billy Ocean is advocating for what became the Goldwater-Nichols Act.
 
 - Wanted to take advantage of **economies of scale**, resolve **coordination problems** in U.S. military.
-
-
-Methods
-=======
 
 ### The Good Day Hypothesis
 
@@ -93,6 +62,9 @@ This leads to two different hypotheses:
 - $H_1$: Ice Cube is having a good (i.e. greater than average) day.
 
 These hypotheses are tested using archival data of Ice Cube's life.
+
+Methods
+=======
 
 ### LaTex Equations
 
