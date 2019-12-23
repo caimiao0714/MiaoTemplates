@@ -8,7 +8,7 @@ titlegraphic: './logos/SLU-CPHSJ-left.png'
 fontsize: 10pt
 output:
  beamer_presentation:
-    template: tex/Beamer_Miao_template.tex
+    template: tex/Beamer_English_Miao.tex
     keep_tex: false
     latex_engine: xelatex # pdflatex also works here
     dev: cairo_pdf # I typically comment this out  if latex_engine: pdflatex
