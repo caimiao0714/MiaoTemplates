@@ -23,26 +23,34 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage[colorlinks=true,urlcolor=redBurn,linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
 %\usepackage{titlesec}
 
 % left align title, author, and date
-\makeatletter
-\renewcommand{\maketitle}{\bgroup
-  \flushleft{\huge{\textbf{\@title}}}  \vspace{5mm}
-    \setlength{\parindent}{22pt}
+%\makeatletter
+%\renewcommand{\maketitle}{\bgroup
+%  \flushleft{\huge{\textbf{\@title}}}  \vspace{5mm}
+%    \setlength{\parindent}{22pt}
   
-  \large{\@author} 	\\\vspace{1.5mm}
-  \large{\today}
-\egroup
-}
-\makeatother
+%  \large{\@author} 	\\\vspace{1.5mm}
+%  \large{\today}
+%\egroup
+%}
+%\makeatother
+\usepackage{titling}
+\pretitle{\begin{center}\huge\textbf} 
+\posttitle{\end{center}}
+%\preauthor{\begin{flushleft}\large} 
+%\postauthor{\end{flushleft}}
+%\predate{\begin{flushleft}\large} 
+%\postdate{\end{flushleft}}
 
-%************ MAIN ************
-
-
+%******* Title, author, date *********
 \title{A Journey to the West}
 \author{Miao Cai}
+\date{\today}
 
+%************ MAIN ************
 \begin{document}
 \maketitle
 
