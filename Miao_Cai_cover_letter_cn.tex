@@ -1,0 +1,107 @@
+\documentclass[11pt, a4paper]{article}
+%\usepackage[a4paper, margin=30mm]{geometry}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{enumerate}
+\hypersetup{colorlinks,urlcolor=blue}
+\usepackage{fontspec} 
+\usepackage[UTF8]{ctex}
+\usepackage{epigraph}
+\usepackage{titlesec}
+\usepackage{graphicx,wrapfig,lipsum}
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, left=22mm, right=22mm, top=25mm, bottom=25mm}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+   Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  %BoldFont=\fzxbs,
+  BoldFont={LinLibertine_RB.otf},
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem}
+% SET FONTS
+\setCJKfamilyfont{MyCJKfzxbs}{FZXiaoBiaoSong-B05S} %方正小标宋简体
+\newcommand{\fzxbs}{\CJKfamily{MyCJKfzxbs}}
+
+\sectionfont{\fzxbs\bfseries\upshape\Large}
+\subsectionfont{\fzxbs\bfseries\scshape\normalsize} 
+\subsubsectionfont{\fzxbs\bfseries\upshape\large} 
+
+
+
+\pagenumbering{gobble}
+\setlength{\parskip}{0.8em}%
+%\setlength{\parindent}{0pt}%
+
+\begin{document}
+
+%\noindent
+
+\today\\
+尊敬的哈尔滨工业大学（深圳）的领导和老师，
+
+\vspace*{\fill}
+
+\setlength{\parindent}{24pt}%
+你们好！我是美国圣路易斯大学公共卫生学院的三年级博士研究生 蔡苗，预计将于2020年5月毕业。我的专业是生物统计，研究方向包括贝叶斯统计、卫生经济与卫生政策、交通运输安全、临床流行病学等。我从哈尔滨工业大学的官方网站上看到了此次2019年经济管理学院青年学者分论坛的通知，在简单浏览了学校的招聘岗位和要求之后，我认为我基本符合助理研究员或者等同职位的要求，因此在此申请本次论坛和应聘学校相关岗位。
+
+在本硕博的学习过程中，我一直成绩优异。本科结束加权平均分位列全班第二，获得推荐免试研究生的学习资格；博士学习期间在60个学分的课程项目中，我拿到了GPA 3.95/4.0的成绩。优异的成绩也为我赢得了无数奖项，包括一次国家奖学金，两次国家励志奖学金，一次香港道德会奖学金，两次国家留学基金委超过5.5万美金的生活费资助，美国国家自然科学基金5万美金的研究助理资助，以及圣路易斯大学博士研究生全额奖学金。
+
+在学术研究方面，我参与过两个中国国家自然科学基金面上项目，数十次中国省部级科研项目，美国两个国家级研究项目和一次基金撰写。我在美国退伍军人事务部临床流行病学研究中心有接近两年的全职研究经历，与各个学科的研究人员有着密切且深入的讨论、日常会议、以及研究合作经验。在中文核心期刊上发表论文12篇，其中第一作者文章5篇。在International Journal of Integrated Care，International Journal of Environmental Research and Public Health，American Journal of Medical Quality等杂志上有第一作者身份发表的文章3篇，合作论文共11篇，还有正在杂志社审稿的论文5篇。预计到2020年毕业的时候能够有第一作者发表的国际同行评议论文5篇。
+
+相较于其它应聘者，我认为我有以下突出优势：
+%\vspace{-0.3\baselineskip}
+\begin{enumerate}[(A)]
+	\setlength{\parskip}{-0.2em}%
+	\item \textbf{研究兴趣与合作广泛}：在中美两国以及多个学科（统计、经济、临床流行病、交通运输等）都建立了广泛的研究合作和学术联系，并且熟悉中美两国的学术研究开展方式和特点，有助于学校开展国际合作和跨学科交叉研究。
+	\item \textbf{统计理论与实践结合}：我的博士主要研究方向是贝叶斯统计在大数据中的应用，因此掌握统计相关理论，并且能够运用R/Python/SAS/SQL等编程语言实现大数据的建模统计分析，这是未来特别有前景的研究方向。
+	\item \textbf{发展潜力和空间巨大}：我的未来研究开展方向为依托于电子病历信息的经济统计建模研究。在中国老龄化和信息系速度越来越快的背景下，对医疗的需求与日俱增，并且医疗电子信息系统越来越完善，我坚信这个方向能够为国家和社会带来巨大价值。
+\end{enumerate}
+
+
+
+感谢哈尔滨工业大学（深圳）的厚爱与支持！期待能有机会与大家在深圳见面。
+
+
+
+\vspace*{\fill}
+
+
+\setlength{\parindent}{0pt}%
+\begin{minipage}[b]{0.57\linewidth}
+蔡苗\\
+美国圣路易斯大学$\,$公共卫生学院$\,$流行病与生物统计系\\
+3545 Lafayette Avenue Room 484, St. Louis, MO 63108, USA\\
+Email: \href{mailto:miao.cai@slu.edu}{miao.cai@slu.edu}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.43\linewidth}
+\includegraphics[width=\linewidth]{LEFT_CPHSJ.png}
+\end{minipage}
+
+\end{document} 
