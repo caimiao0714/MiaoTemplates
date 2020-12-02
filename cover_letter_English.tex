@@ -1,0 +1,133 @@
+\documentclass[11pt, a4paper]{article}
+%\usepackage[a4paper, margin=30mm]{geometry}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{enumerate}
+\hypersetup{colorlinks,urlcolor=blue}
+\usepackage{fontspec} 
+%\usepackage[UTF8]{ctex}
+\usepackage{epigraph}
+\usepackage{titlesec}
+\usepackage{graphicx,wrapfig,lipsum}
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, left=25mm, right=25mm, top=10mm, bottom=20mm}
+\setlength\parindent{0in}
+\usepackage[export]{adjustbox}
+
+\usepackage{setspace}
+\linespread{1.35}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+   Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  %BoldFont=\fzxbs,
+  BoldFont={LinLibertine_RB.otf},
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+\definecolor{clemsonpurple}{HTML}{522D80}
+\definecolor{clemsonorange}{HTML}{F66733}
+\definecolor{uiucblue}{HTML}{003C7D}
+\definecolor{uiucorange}{HTML}{F47F24}
+\definecolor{slublue}{HTML}{003EA5}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem}
+% SET FONTS
+%\setCJKfamilyfont{MyCJKfzxbs}{FZXiaoBiaoSong-B05S} %方正小标宋简体
+\newcommand{\fzxbs}{\CJKfamily{MyCJKfzxbs}}
+
+\sectionfont{\fzxbs\bfseries\upshape\Large}
+\subsectionfont{\fzxbs\bfseries\scshape\normalsize} 
+\subsubsectionfont{\fzxbs\bfseries\upshape\large} 
+
+
+
+\pagenumbering{gobble}
+\setlength{\parskip}{0.8em}%
+%\setlength{\parindent}{0pt}%
+
+\begin{document}
+\begin{minipage}[c]{0.25\linewidth}
+\includegraphics[trim=25 35 25 25, clip, width=\linewidth, right]{SLU.png}%\frame{}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.5\linewidth}
+\begin{flushright}
+\textcolor{slublue}{Department of Epidemiology and Biostatistics}\\
+\textcolor{slublue}{College for Public Health \& Social Justice}\\
+\textcolor{slublue}{Saint Louis University}\\
+\textcolor{slublue}{3545 Lafayette Ave., St. Louis, MO 63103}
+\end{flushright}
+\end{minipage}
+
+\vspace{-5pt}
+\par\noindent\rule{\textwidth}{0.4pt}
+\vspace{-28pt}
+%\noindent
+
+\today\\
+Dear Dr. Aldcroft, \\
+Editor-In-Chief, \\
+BMJ Open, 
+
+\vspace*{\fill}
+
+We are submitting for your consideration the manuscript titled “Temporal Trends of COVID-19 Mortality and Hospitalization Rates: An observational cohort study from the US Department of Veterans Affairs”
+
+As you know, until recently, COVID-19 mortality rates have declined. While this has been widely reported, it is not clear is why mortality rates have fallen. 
+
+Here, we leveraged the breadth and depth of VA data to gain a better insight into why COVID-19 hospitalization and mortality rates have declined in the first 6 months of the pandemic. Here we:
+
+\vspace{-0.3\baselineskip}
+\begin{enumerate}[(A)]
+	\setlength{\parskip}{-0.2em}%
+	\item Describe temporal trends of hospitalization and morality between March and September 2020	
+	\item Characterize predictors of these outcomes, and
+	\item Decompose the contribution of changes in the underlying characteristics of affected populations as well as broader contextual factors to the changes in temporal trends. 
+\end{enumerate}
+
+The results may be helpful in guiding the continued effort to manage the ongoing COVID-19 global pandemic. 
+
+We understand that during these unprecedented times, medical journals are inundated with manuscripts and the peer review system is substantially strained. We deeply appreciate the work done by BMJ Open to gracefully navigate these challenges.
+
+
+\vspace*{\fill}
+With profound gratitude,
+
+
+
+\begin{minipage}[c]{0.7\linewidth}
+\includegraphics[trim=0 10 0 10, clip, width=0.3\linewidth]{Miao_Cai_sig_EN}\\
+Miao Cai, Ph.D., Postdoctoral Associate\\
+Department of Epidemiolgy \& Biostatistics\\
+College for Public Health \& Social Justice\\
+Saint Louis University\\
+Email: \href{mailto:miao.cai@outlook.com}{miao.cai@outlook.com}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.3\linewidth}
+%\includegraphics[trim=0 160 0 160, clip, width=\linewidth]{va.pdf}
+\end{minipage}
+
+\end{document} 
