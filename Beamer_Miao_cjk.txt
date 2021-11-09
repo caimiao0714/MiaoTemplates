@@ -1,0 +1,150 @@
+---
+title: "R统计分析教程"
+author: "蔡苗"
+date: "`r Sys.Date()`"
+fontsize: 10pt
+institute: '中山大学 公共卫生学院'
+output: 
+  beamer_presentation: 
+    latex_engine: xelatex
+    template: Data/beamer_default.tex
+    theme: Warsaw
+    #fonttheme: professionalfonts
+    highlight: pygments
+---
+
+# 测试R Markdown
+
+## 测试中文
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+
+## 环境要求
+
+既然你要生成中文的PDF,想必你已经安装了`MikTex`,如果你装了Rstudio,那么你一定也装了`pandoc`. 测试环境变量中是否有`pandoc`,只需Windows Cmd (win+R -> cmd ->Enter)中运行 `pandoc -v` .
+
+## 生成步骤
+
+1. 下载这个文件夹
+2. 打开 `test.Rmd`
+3. 按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> (knit PDF)
+4. 耐心等待渲染,然后看看生成的结果.
+
+你可以在 `knit PDF` 的旁边, `Output Options` 里面自定义主题; 或者你可以直接修改`_output.yaml`里面的 theme 和 fonttheme.
+
+*如果你碰到了问题请提交issue*,**请务必附上报错的信息啊!**
+
+
+## 代码与图
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dev = 'pdf')
+library(ggplot2)
+library(ggthemes)
+```
+
+```{r out.width="80%", fig.align="center"}
+ggplot(diamonds, aes(carat, price,colour=cut)) +
+  geom_boxplot() + 
+  theme_tufte(base_size = 20)
+```
+
+
+## Another slide
+
+This is another slide with some fancy equations
+
+```{=latex}
+\begin{align}
+    \label{eq:nb}
+  \begin{split}
+        Y_i^\star \vert \mu_i& \sim \text{Negative Binomial}(T_i\times\mu_i, \; \mu_i + \frac{\mu_i^2}{\theta})\\
+        \log\mu_i & = \beta_{0, d(i)}^\star + \beta_{1, d(i)}^\star \cdot \text{CT}_i + \beta_2^\star x_2 + \cdots + \beta_k^\star x_k\\
+        \beta_{0, d(i)}^\star &\sim N(\mu_0^\star, \sigma^{\star 2}_0)\\
+        \beta_{1, d(i)}^\star &\sim N(\mu_1^\star, \sigma^{\star 2}_1).\\
+    \end{split}
+\end{align}
+```
+
+# 一些网络热门的词语
+
+## 聪哥的经典语录（1）
+
+- “宝，我今天去输液了”，“输的什么液？”，“想你的夜”
+- “宝，我今天去种地了”，“种的什么地？”，“对你的死心塌地”
+- “宝，我今天去吃面了”，“吃的什么面？”，“突然想见你一面”
+- “宝，我今天去钓鱼了”，“钓的什么鱼？”，“爱你到至死不渝”
+- “宝，我今天做核酸了”，“做的什么酸？”，“得不到你的心酸”
+- “宝，我今天打疫苗了”，“打的什么庙？”，“我爱你的每一秒”
+- “宝，我今天去吃饭了”，“吃的什么饭？”，“想让你乖乖就范”
+
+## 聪哥的经典语录（2）
+
+- “宝，我今天去上班了”，“上的什么班？”，“我爱你的不一般”
+- “宝，我今天嗑瓜子了”，“磕的什么子？”，“是你的真命天子”
+- “宝，我今天去运动了”，“运的什么动？”，“对你每一次心动”
+- “宝，我今天已躺平了”，“躺的什么平？”，“得不到你意难平”
+- “宝，我今天逛马路了”，“逛的什么路？”，“爱你到没有退路”
+- “宝，我今天要吃药了”，“吃的什么药？”，“你最最最最重要”
+- “宝，我今天买了个盒”，“买的什么盒？”，“我们的天作之合”
+- “宝，我今天看错了点”，“看的什么点？”，“每天爱你多一点”
+
+## 中国四大才子
+
+1. 悔创阿里杰克马
+2. 不知妻美刘强东
+3. 普通家庭马化腾
+4. 一无所有王健林
+
+### **无形撞壁，最为致命**
+
+\alert{屌丝的逆袭}
+
+
+# 我的影响因子
+
+## 我的影响因子-横向排列
+
+```{=latex}
+\begin{figure}[H]
+		\centering
+		\begin{subfigure}[b]{.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Figures/first_author.pdf}
+			\caption{第一作者论文(N=10)影响因子分布}
+		\end{subfigure}%
+		\begin{subfigure}[b]{.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Figures/co-authored.pdf}
+			\caption{合作论文(N=26)影响因子分布}
+		\end{subfigure}
+		%\caption{论文影响因子分布}
+	\end{figure}
+```
+
+
+## 我的影响因子-纵向排列
+
+```{=latex}
+\begin{figure}[H]
+		\centering
+		\begin{subfigure}[b]{.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Figures/first_author.pdf}
+			\caption{第一作者论文(N=10)影响因子分布}
+		\end{subfigure}%
+		
+		\begin{
+
+```
+
+
+
+## {.standout}
+
+**我不是针对任何一个人，我是说在座的所有人都是辣鸡**
+
+
